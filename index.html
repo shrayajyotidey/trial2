@@ -1449,11 +1449,10 @@ bizUseMyLocBtn.addEventListener('click', () => {
 
 
 
-// intregation of backend
+<!-- intregation of backend -->
 <script>
 const API_URL = "http://localhost:5000"; // backend base url
-
-// ================= AUTH MODAL =================
+<!--model auth-->
 document.getElementById("authOpenBtn").addEventListener("click", () => {
   document.getElementById("authModal").style.display = "flex";
 });
@@ -1496,7 +1495,7 @@ document.getElementById("mockLoginBtn").addEventListener("click", async () => {
   }
 });
 
-// ================= VENDOR FORM =================
+<!--VENDOR FORM-->
 document.getElementById("biz-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -1529,7 +1528,7 @@ document.getElementById("biz-form").addEventListener("submit", async (e) => {
   loadAllVendors();
 });
 
-// ================= VENDOR LISTINGS =================
+<!--VENDOR LISTINGS-->
 async function loadVendors(category, elementId) {
   const res = await fetch(`${API_URL}/vendors`);
   const vendors = await res.json();
@@ -1564,3 +1563,4 @@ loadAllVendors();
 
 </body>
 </html>
+
